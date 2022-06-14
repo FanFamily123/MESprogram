@@ -45,6 +45,7 @@
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
+            this.button18 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button2
@@ -217,11 +218,22 @@
             this.button17.UseVisualStyleBackColor = true;
             this.button17.Click += new System.EventHandler(this.button17_Click);
             // 
+            // button18
+            // 
+            this.button18.Location = new System.Drawing.Point(375, 440);
+            this.button18.Name = "button18";
+            this.button18.Size = new System.Drawing.Size(156, 51);
+            this.button18.TabIndex = 21;
+            this.button18.Text = "webservie";
+            this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.button18_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(602, 618);
+            this.Controls.Add(this.button18);
             this.Controls.Add(this.button17);
             this.Controls.Add(this.button16);
             this.Controls.Add(this.button15);
@@ -264,6 +276,7 @@
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button17;
+        private System.Windows.Forms.Button button18;
     }
 }
 
