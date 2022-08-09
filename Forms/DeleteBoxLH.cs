@@ -279,6 +279,30 @@ namespace MESprogram.Forms
             }
 
         }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+         
+            EWAdd ewAdd = new EWAdd();
+            // ewAdd.toolId = getMtool;
+            ewAdd.boxId = this.txtLH.Text.Trim();
+       
+            ewAdd.actionFlg = "m";
+            ewAdd.evtUsr = "EAP800";
+            ewAdd.trxId = "EAPSERVICE";
+            ewAdd.transactionId = GetTimeStamp();
+            //   ewAdd.woId = getwoId;
+
+            var returnMsg = httpHandler.DoPostAddnew(ewAdd);
+
+            MessageBox.Show(returnMsg);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            var getTime= (DateTime.Now.ToUniversalTime().Ticks - 621355968000000000) / 10000000;
+            MessageBox.Show(getTime + "");
+        }
     }
 
 

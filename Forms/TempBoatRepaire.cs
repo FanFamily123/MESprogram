@@ -291,7 +291,7 @@ namespace MESprogram.Forms
 
         private void button4_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 100; i++)
             {
                 var flag=   Prtshangliao();
               
@@ -587,14 +587,13 @@ namespace MESprogram.Forms
             Ew08 ew08 = new Ew08();
             ew08.lineId = "1";
             ew08.opeId = "IVT";
-            ew08.toolId = "TP001";
-            ew08.actionFlg = "W";
+            ew08.toolId = "TP002";
+            ew08.actionFlg = "N";
             ew08.evtUsr = "EAP800";
             ew08.trxId = "BCTOMES";
-            ew08.channelId = "1";
-            ew08.waferCount = "5";
+            ew08.channelId = "1";           
             ew08.transactionId = GetTimeStamp();
-            ew08.boxId = "A";
+          
 
 
             var returnMsg = httpHandler.DoPostPRT(ew08);
