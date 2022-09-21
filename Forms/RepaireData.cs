@@ -315,5 +315,23 @@ namespace MESprogram.Forms
                 throw;
             }
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            //获取页面上的值,写入模拟器
+            string txtLH = this.txt_EH04.Text.Trim();
+            string req = "1";
+
+
+            string getreq = ConfigurationManager.AppSettings["TEX_reqHandshake"];
+            string geteh04box = ConfigurationManager.AppSettings["EH02"];
+
+            var typePoint = opcUaClient.ReadNode(geteh04box);
+            MessageBox.Show(typePoint + "");
+            MessageBox.Show(typePoint.Value.GetType().ToString()); ;
+
+
+          
+        }
     }
 }

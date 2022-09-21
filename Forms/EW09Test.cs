@@ -26,9 +26,9 @@ namespace MESprogram.Forms
         {
             var getNum=this.num.Text.Trim();
             var getBox=this.bin.Text.Trim();
-            var getwafer1=this.wafer1.Text.Trim(); 
-           // var getwafer2 = this.wafer2.Text.Trim();
-          //  var getwafer3 = this.wafer3.Text.Trim();
+            var getwafer1=this.wafer1.Text.Trim();
+            var getwafer2 = this.wafer2.Text.Trim();
+            var getwafer3 = this.wafer3.Text.Trim();
 
             Ew09 ew09=new Ew09();
             ew09.boxId = getBox;
@@ -37,6 +37,10 @@ namespace MESprogram.Forms
             WaferInfo waferInfo= new WaferInfo();
             waferInfo.prdSeqId = getwafer1;
             waferInfo.slotNo = 1;
+            WaferInfo waferInfo1 = new WaferInfo();
+            waferInfo1.prdSeqId = getwafer2;
+            waferInfo1.slotNo = 2;
+
             list.Add(waferInfo);
 
             ew09.transactionId = GetTimeStamp();

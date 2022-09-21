@@ -155,5 +155,26 @@ namespace MESprogram.Forms
 
             MessageBox.Show(returnMsg);
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            EH02 eH02 = new EH02();
+            eH02.boxId = this.txtBSGHLR.Text.Trim();
+
+            eH02.lineId = "1";
+            eH02.opeId = "FPCB";
+            eH02.toolId = "UP001";
+            eH02.actionFlg = "H";
+            eH02.evtUsr = "EAP800";
+            eH02.trxId = "BCTOMES";
+
+            eH02.transactionId = GetTimeStamp();
+
+
+            var returnMsg = httpHandler.DoPostDIF(eH02);
+
+            MessageBox.Show(returnMsg);
+
+        }
     }
 }

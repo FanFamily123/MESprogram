@@ -24,6 +24,7 @@ namespace MESprogram.Pojo
 
         public String BoxIdB { get; set; }
 
+        public String areaNo { get; set; }
 
 
         public List<WaferInfo> iary { get; set; }

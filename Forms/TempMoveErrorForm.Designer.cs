@@ -49,6 +49,8 @@
             this.txtMoveWaferCount = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -225,7 +227,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(41, 397);
+            this.button4.Location = new System.Drawing.Point(31, 352);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(165, 62);
             this.button4.TabIndex = 21;
@@ -233,11 +235,33 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label11.Location = new System.Drawing.Point(24, 447);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(137, 25);
+            this.label11.TabIndex = 22;
+            this.label11.Text = "获取舟数据";
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(188, 433);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(113, 58);
+            this.button5.TabIndex = 23;
+            this.button5.Text = "获取舟数据";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // TempMoveErrorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 707);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.txtMoveWaferCount);
             this.Controls.Add(this.label10);
@@ -289,5 +313,7 @@
         private System.Windows.Forms.TextBox txtMoveWaferCount;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button button5;
     }
 }

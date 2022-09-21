@@ -13,6 +13,9 @@ namespace MESprogram.Pojo
         public String waferCountA { get; set; }
         public String waferCountB { get; set; }
         public String boatId { get; set; }
+        public String boxId { get; set; }
+
+        public String waferCount { get; set; }
 
         public String actionType { get; set; }
         public String channelId { get; set; }

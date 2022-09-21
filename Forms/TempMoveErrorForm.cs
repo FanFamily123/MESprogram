@@ -119,5 +119,33 @@ namespace MESprogram.Forms
             Pojo.Ew03 m2 = new Pojo.Ew03();
             MessageBox.Show("数据" + m1.GetHashCode() + "数据" + m2.GetHashCode());
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //插入
+            Pojo.Ew03 mew03waferiobtI = new Pojo.Ew03();
+            mew03waferiobtI.lineId = "1";
+            mew03waferiobtI.opeId = "PECVD";
+            mew03waferiobtI.toolId = "PECVD02";
+            mew03waferiobtI.actionFlg = "W";
+            mew03waferiobtI.evtUsr = "EAP800";
+            mew03waferiobtI.trxId = "BCTOMES";
+            mew03waferiobtI.boatblockNo = "1";
+            mew03waferiobtI.areaNo = "1";
+
+            mew03waferiobtI.transactionId = GetTimeStamp();
+
+
+
+            mew03waferiobtI.channelId = "1";
+
+            mew03waferiobtI.boxId = "FA999";
+
+
+
+            var returnMsg = httpHandler.DoPost1(mew03waferiobtI);
+
+            MessageBox.Show(returnMsg);
+        }
     }
 }

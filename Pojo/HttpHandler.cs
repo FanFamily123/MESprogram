@@ -201,6 +201,45 @@ namespace MESprogram.Pojo
         }
 
 
+        public string DoPostAddnew1(Ew08 ew03)
+        {
+            try
+            {
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                Dictionary<string, string> dic = new Dictionary<string, string>();
+
+                var x = JsonConvert.SerializeObject(ew03);
+                dic.Add("strInMsg", x);
+
+                var result = ParseToString(dic);
+                //      HttpContent content = new StringContent(JsonConvert.SerializeObject(dic));
+                result = "{" + result + ",\"trxId" + "\":" + "\"EAPSERVICE" + "\"}";
+                HttpContent content = new StringContent(result);
+
+                content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+
+
+
+                HttpResponseMessage res = client.PostAsync(mesUrl, content).Result;
+                if (res.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    string str = res.Content.ReadAsStringAsync().Result;
+                    return str;
+                }
+                else
+                    return null;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+
+
         public string DoPostEH08(EH08 ew03)
         {
             try
@@ -401,7 +440,7 @@ namespace MESprogram.Pojo
 
                 var result = ParseToString(dic);
                 //      HttpContent content = new StringContent(JsonConvert.SerializeObject(dic));
-                result = "{" + result + ",\"trxId" + "\":" + "\"BCTOMES" + "\"}";
+                result = "{" + result + ",\"trxId" + "\":" + "\"EAPSERVICE" + "\"}";
                 HttpContent content = new StringContent(result);
 
                 content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
@@ -422,6 +461,82 @@ namespace MESprogram.Pojo
                 throw ex;
             }
         }
+
+
+        public string DoPostDIF2(Ew03New eh02)
+        {
+            try
+            {
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                Dictionary<string, string> dic = new Dictionary<string, string>();
+
+                var x = JsonConvert.SerializeObject(eh02);
+                dic.Add("strInMsg", x);
+
+                var result = ParseToString(dic);
+                //      HttpContent content = new StringContent(JsonConvert.SerializeObject(dic));
+                result = "{" + result + ",\"trxId" + "\":" + "\"EAPSERVICE" + "\"}";
+                HttpContent content = new StringContent(result);
+
+                content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+
+
+
+                HttpResponseMessage res = client.PostAsync(mesUrl, content).Result;
+                if (res.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    string str = res.Content.ReadAsStringAsync().Result;
+                    return str;
+                }
+                else
+                    return null;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+        public string DoPost3(Ew03 eh02)
+        {
+            try
+            {
+                client.DefaultRequestHeaders.Accept.Clear();
+                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+
+                Dictionary<string, string> dic = new Dictionary<string, string>();
+
+                var x = JsonConvert.SerializeObject(eh02);
+                dic.Add("strInMsg", x);
+
+                var result = ParseToString(dic);
+                //      HttpContent content = new StringContent(JsonConvert.SerializeObject(dic));
+                result = "{" + result + ",\"trxId" + "\":" + "\"EAPSERVICE" + "\"}";
+                HttpContent content = new StringContent(result);
+
+                content.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue("application/json");
+
+
+
+                HttpResponseMessage res = client.PostAsync(mesUrl, content).Result;
+                if (res.StatusCode == System.Net.HttpStatusCode.OK)
+                {
+                    string str = res.Content.ReadAsStringAsync().Result;
+                    return str;
+                }
+                else
+                    return null;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
 
         public string DoPostMove(Move move)
         {

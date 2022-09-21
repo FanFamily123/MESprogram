@@ -282,7 +282,7 @@ namespace MESprogram.Forms
             _ew07.actionFlg = "I";
             _ew07.evtUsr = "EAP800";
             _ew07.trxId = "BCTOMES";
-            _ew07.channelId = "1";
+            _ew07.channelId = "2";
             _ew07.subToolId = getSub;
 
             _ew07.transactionId = GetTimeStamp();
@@ -312,7 +312,7 @@ namespace MESprogram.Forms
             ewAdd.transactionId = GetTimeStamp();
          //   ewAdd.woId = getwoId;
 
-            var returnMsg = httpHandler.DoPostAdd(ewAdd);
+            var returnMsg = httpHandler.DoPostAddnew(ewAdd);
 
             MessageBox.Show(returnMsg);
         }

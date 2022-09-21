@@ -170,5 +170,23 @@ namespace MESprogram
             //Forms.WebServiceForm we=new Forms.WebServiceForm();
             //we.Show();
         }
+
+        private void button19_Click(object sender, EventArgs e)
+        {
+            Forms.DIFaForms dif = new Forms.DIFaForms();
+            dif.Show();
+        }
+
+        private void button20_Click(object sender, EventArgs e)
+        {
+            Forms.AutoMes dif = new Forms.AutoMes();
+            dif.Show();
+        }
+
+        private void button21_Click(object sender, EventArgs e)
+        {
+            Forms.LogForm log1=new Forms.LogForm();
+            log1.Show();
+        }
     }
 }

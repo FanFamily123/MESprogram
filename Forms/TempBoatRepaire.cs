@@ -587,16 +587,17 @@ namespace MESprogram.Forms
             Ew08 ew08 = new Ew08();
             ew08.lineId = "1";
             ew08.opeId = "IVT";
-            ew08.toolId = "TP002";
+            ew08.toolId = "TP001";
             ew08.actionFlg = "N";
             ew08.evtUsr = "EAP800";
             ew08.trxId = "BCTOMES";
+            ew08.waferCount = "50";
             ew08.channelId = "1";           
             ew08.transactionId = GetTimeStamp();
           
 
 
-            var returnMsg = httpHandler.DoPostPRT(ew08);
+            var returnMsg = httpHandler.DoPostAddnew1(ew08);
             MessageBox.Show(returnMsg);
         }
     }

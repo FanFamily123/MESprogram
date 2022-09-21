@@ -720,7 +720,7 @@ namespace MESprogram.Forms
             var getTool=this.txtToolMO.Text.Trim();
 
             //获取硅片数组
-            ew071 _ew07 = new ew071();
+            Ew03New _ew07 = new Ew03New();
             // _ew07.iary = getwaferIds1(getWaferStartId, int.Parse(getNum));
             _ew07.boxId = getBox;
             _ew07.waferCount = "100";
@@ -735,7 +735,7 @@ namespace MESprogram.Forms
             _ew07.transactionId = GetTimeStamp();
 
 
-            var returnMsg = httpHandler.DoPostTex1(_ew07);
+            var returnMsg = httpHandler.DoPostDIF2(_ew07);
 
             MessageBox.Show(returnMsg);
         }
@@ -750,7 +750,7 @@ namespace MESprogram.Forms
             var getToole=this.textBox1.Text.Trim();
             var getBlock=this.txtBlock.Text.Trim();
             //获取硅片数组
-            ew071 _ew07 = new ew071();
+            Ew03 _ew07 = new Ew03();
             // _ew07.iary = getwaferIds1(getWaferStartId, int.Parse(getNum));
             _ew07.boxId = getBox;
          //   _ew07.waferCount = "290";
@@ -766,7 +766,7 @@ namespace MESprogram.Forms
             _ew07.transactionId = GetTimeStamp();
 
 
-            var returnMsg = httpHandler.DoPostTex1(_ew07);
+            var returnMsg = httpHandler.DoPost3(_ew07);
 
             MessageBox.Show(returnMsg);
         }
@@ -797,7 +797,7 @@ namespace MESprogram.Forms
             ew03New.evtUsr = "EAP800";
             ew03New.trxId = "BCTOMES";
 
-            var returnMsg = httpHandler.DoPostDIF1(ew03New);
+            var returnMsg = httpHandler.DoPostDIF2(ew03New);
 
             MessageBox.Show(returnMsg);
 
@@ -831,7 +831,7 @@ namespace MESprogram.Forms
 
            
 
-            var returnMsg = httpHandler.DoPost1(mew03waferiobtI);
+            var returnMsg = httpHandler.DoPost3(mew03waferiobtI);
 
             MessageBox.Show(returnMsg);
         }
